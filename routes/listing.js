@@ -127,10 +127,6 @@ router.get(
       return res.redirect("/listings");
     }
     let originalImageUrl = listing.image.url;
-    originalImageUrl = originalImageUrl.split(
-      /\/upload/g, // Using regex to replace all instances
-      "/upload/w_250"
-    );
 
     res.render("listings/edit.ejs", { listing, originalImageUrl });
   })
